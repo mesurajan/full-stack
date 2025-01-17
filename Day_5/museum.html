@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Museum Exhibit Guide</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to the Museum of History</h1>
+        <nav>
+            <ul>
+                <li><a href="#exhibits">Exhibits</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#map">Map</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+        <!-- Hero Section with Video Background -->
+        <section>
+            <video autoplay muted loop style="width: 100%; height: auto;">
+                <source src="museum-highlights.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h2>Explore the Wonders of History</h2>
+        </section>
+    
+        <!-- Exhibits Section -->
+        <section id="exhibits">
+            <h2>Exhibits</h2>
+            <article>
+                <h3>Ancient Egypt</h3>
+                <figure>
+                    <img src="egypt-exhibit.jpg" alt="Ancient Egypt Exhibit" style="width: 100%; height: auto;">
+                    <figcaption>The mysteries of Ancient Egypt come alive!</figcaption>
+                </figure>
+                <audio controls>
+                    <source src="egypt-description.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </article>
+            <article>
+                <h3>Medieval Europe</h3>
+                <figure>
+                    <img src="medieval-exhibit.jpg" alt="Medieval Europe Exhibit" style="width: 100%; height: auto;">
+                    <figcaption>Step into the medieval ages.</figcaption>
+                </figure>
+                <audio controls>
+                    <source src="medieval-description.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </article>
+        </section>
+    
+        <!-- Interactive Map -->
+        <section id="map">
+            <h2>Museum Map</h2>
+            <canvas id="museum-map" width="800" height="400" style="border: 1px solid black;"></canvas>
+            <map name="museum">
+                <area shape="rect" coords="50,50,150,150" href="#exhibits" alt="Exhibit Section">
+                <area shape="rect" coords="200,50,300,150" href="#gallery" alt="Gallery Section">
+            </map>
+        </section>
+    
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <picture>
+                <source srcset="gallery-large.jpg" media="(min-width: 800px)">
+                <source srcset="gallery-medium.jpg" media="(min-width: 500px)">
+                <img src="gallery-small.jpg" alt="Gallery Image" style="width: 100%; height: auto;">
+            </picture>
+            <details>
+                <summary>About this piece</summary>
+                This artifact dates back to the 12th century and represents the artistic mastery of its time.
+            </details>
+        </section>
+    
+        <!-- Feedback Form -->
+        <section id="feedback">
+            <h2>Feedback</h2>
+            <form>
+                <fieldset>
+                    <legend>Share your thoughts</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="visit-date">Date of Visit:</label>
+                    <input type="date" id="visit-date" name="visit-date"><br>
+                    <label for="satisfaction">Satisfaction:</label>
+                    <input type="range" id="satisfaction" name="satisfaction" min="0" max="10"><br>
+                    <textarea id="comments" name="comments" placeholder="Leave your comments here..."></textarea><br>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </section>
+    
+        <!-- Footer Section -->
+        <footer>
+            <h2>Contact Us</h2>
+            <address>
+                Museum of History, 123 Heritage Lane, History Town, HT 45678<br>
+                Phone: (123) 456-7890<br>
+                Email: <a href="mailto:info@museum.com">info@museum.com</a>
+            </address>
+            <p>
+                Follow us: 
+                <a href="https://facebook.com">Facebook</a> | 
+                <a href="https://twitter.com">Twitter</a> | 
+                <a href="https://instagram.com">Instagram</a>
+            </p>
+        </footer>
+    </body>
+    </html>
+    
+</body>
+</html>
