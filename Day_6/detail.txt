@@ -1,0 +1,23 @@
+Create a fully responsive "Product Showcase" webpage using only HTML5 (no CSS or JavaScript). The webpage should include the following:
+
+A header with a title and navigation links.
+
+The navigation links should include "Home," "Products," "About," and "Contact."
+Use semantic tags for better structure.
+A hero section with a heading and a short description about the products.
+
+A product grid:
+
+Display at least 6 products.
+Each product should include an image, a title, a description, and a "Buy Now" button.
+A contact form with:
+
+Input fields for name, email, and message.
+A submit button.
+Footer with copyright information and social media links.
+
+Ensure accessibility:
+
+Use appropriate ARIA roles.
+Add alt attributes for all images.
+Use proper semantic tags for sections, articles, etc.
