@@ -1,0 +1,39 @@
+.navbar{
+    background-color:black;
+    color:antiquewhite;
+}
+
+body{
+    background-color:chocolate ;
+}
+
+.container
+{
+    width:500px;
+    margin:auto;
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arrange items in a row */
+    justify-content: center; /* Center-align the items horizontally */
+    background-color: black; /* Navbar background color */
+}
+
+.navbar ul li {
+    margin: 0 15px; /* Add spacing between items */
+}
+
+.navbar ul li a {
+    text-decoration: none; /* Remove underline */
+    color:chocolate; /* Text color */
+    font-size: 18px; /* Font size */
+    font-family: Arial, sans-serif;
+    transition: color 0.3s; /* Add hover effect */
+}
+
+.navbar ul li a:hover {
+    color: orange; /* Change color on hover */
+}

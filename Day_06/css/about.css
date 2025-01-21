@@ -1,0 +1,22 @@
+.about{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+   background-color: #ff9966;
+   padding: 20px;
+   margin: 20px;
+   border: 1px solid #000;
+   border-radius: 10px;
+}
+.about img {
+            max-width: 250px;
+            border-radius: 15px;
+        }
+
+.about-details {
+           text-align: justify;
+            line-height: 1.5;
+            margin: 10px 0 0;
+            width:500px;
+        }

@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Showcase</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/product.css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" type="text/css" href="css/about.css">
 </head>
 <body>
     <!--Header section -->
     <header role="banner">
         <h1 style="text-align:center">Product Showcase</h1>
-        <div>
-            <nav role="navigation">
+        <div >
+            <nav class="navbar"role="navigation">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#product">Products</a></li>
@@ -23,20 +27,25 @@
 
     <!--Section Home-->
     <section id ="home">
-        <h1>Welcome to Our Exclusive Product Showcase!</h1>
-        <img src="images/image1.jpg" alt="home" style="max-height: 250px; border-radius: 15px;">
-        <p style="font-family: Arial, Helvetica, sans-serif;text-align:justify;line-height:1.06;margin: 0;">Discover a world of innovation and quality through our 
-            carefully curated collection of products. Whether you're 
-            looking for the latest technology, timeless essentials, or
-             unique lifestyle solutions, we've got you covered. 
-             Each product is crafted with precision, combining 
-             functionality with style to suit your modern needs. 
-             Our mission is to provide unparalleled value, ensuring 
-             every item meets the highest standards of durability, 
-             usability, and design. Browse through our categories to 
-             find the perfect fit for your lifestyle. With our commitment 
-             to excellence and customer satisfaction, your shopping experience 
-             is guaranteed to be seamless and rewarding.</p>
+        <div class="main">
+            <h1 class="home">Welcome to Our Exclusive Product Showcase!</h1>
+            <img src="images/image1.jpg" alt="home" style="max-height: 250px; border-radius: 15px;">
+        <div class="container">
+            <p class="home-text"style="font-family: Arial, Helvetica, sans-serif;text-align:justify;line-height:1.06;margin: 0;">Discover a world of innovation and quality through our 
+                carefully curated collection of products. Whether you're 
+                looking for the latest technology, timeless essentials, or
+                 unique lifestyle solutions, we've got you covered. 
+                 Each product is crafted with precision, combining 
+                 functionality with style to suit your modern needs. 
+                 Our mission is to provide unparalleled value, ensuring 
+                 every item meets the highest standards of durability, 
+                 usability, and design. Browse through our categories to 
+                 find the perfect fit for your lifestyle. With our commitment 
+                 to excellence and customer satisfaction, your shopping experience 
+                 is guaranteed to be seamless and rewarding.</p>
+         </div>
+        </div>
+        
     </section>
 
 
@@ -44,21 +53,26 @@
 
     <!--Section Products-->
     <section id="product">
+<div class="main">
     <div>
         <h1>Our Products </h1>
+        <div class="container">
         <p style="font-family: Arial, Helvetica, sans-serif;text-align: justify;line-height: 1.06;margin:0;">Our products are designed with quality, innovation, and 
         your needs in mind. Explore a range of items that combine 
         functionality and style, offering the perfect solutions for 
         your everyday lifestyle.
         </p>
+        </div>
     </div>
 
 <!--Product one-->
-<div>
-    <h3>1.Ultra-Slim Smartphone</h3>
+
+  <div class="product-container">
+    <h3 class="product-name">1.Ultra-Slim Smartphone</h3>
     <img src="images/image2.jpg"  alt="Ultra-Slim Smartphone" style="max-width: 300px;max-width: 250px;border-radius: 15px;">
     <h3>Price:600$ </h3>
     <a href="cart.html" target="_blank"><button>Buy</button></a>
+    <div class="product-details">
     <p style="font-family: Arial, Helvetica, sans-serif; line-height: 1.06; text-align: justify;margin: 0;">The Infinity Edge Pro Smartphone represents the pinnacle of mobile technology. 
         Designed with an ultra-slim profile and a near-bezel-less display, this 
         smartphone offers a stunning visual experience with its 6.8-inch AMOLED screen and 
@@ -67,14 +81,16 @@
         and productivity. With its long-lasting battery and 5G connectivity, it’s the perfect 
         companion for your fast-paced, tech-savvy lifestyle.</p>
         
+    </div>
 </div>
         
 <!--Product two-->
-<div>
-    <h3>2.Advanced Smartwatch</h3>
+<div  class="product-container">
+    <h3 class="product-name">2.Advanced Smartwatch</h3>
     <img src="images/image3.jpg" style="max-width: 300px;max-width: 250px;border-radius: 15px;">
     <h3>Price:150$ </h3>
     <a href="cart.html" target="_blank"><button>Buy</button></a>
+    <div class="product-details">
     <p style="font-family: Arial, Helvetica, sans-serif; line-height: 1.06; text-align: justify;margin: 0;">The ChronoTech Elite Smartwatch is your ultimate fitness and productivity partner. Featuring 
         a sleek, durable design with a full-color AMOLED touchscreen, it seamlessly blends style with 
         functionality. Equipped with advanced health-tracking sensors, it monitors your heart rate, blood 
@@ -82,14 +98,16 @@
         app notifications, while the GPS functionality ensures you never lose your way during outdoor adventures. 
         With a battery life of up to 7 days and water resistance, this smartwatch is designed to keep up 
         with your active lifestyle.</p>
+    </div>
 </div>
 
 <!--Product three-->
-<div>
-    <h3>3.Wireless Bluetooth Earbuds</h3>
+<div class="product-container">
+    <h3 class="product-name">3.Wireless Bluetooth Earbuds</h3>
     <img src="images/image4.jpg" style="max-width: 300px;max-width: 250px;border-radius: 15px;">
     <h3>Price:200$ </h3>
     <a href="cart.html" target="_blank"><button>Buy</button></a>
+    <div class="product-details">
     <p style="font-family: Arial, Helvetica, sans-serif; line-height: 1.06; text-align: justify;margin: 0;"> 
         These premium matte black wireless Bluetooth earbuds are designed to provide both style and exceptional functionality. Featuring a sleek, modern matte black finish, 
         they exude sophistication and professionalism. The advanced touch controls allow for seamless management of music, calls, and volume with a simple tap or swipe, 
@@ -97,14 +115,16 @@
         connected without interruptions.The noise cancellation feature blocks out background noise, delivering crystal-clear audio for an immersive listening experience, 
         whether you're working out, commuting, or in a busy office.
     </p>
+    </div>
 </div>
 
 <!--Product Four-->
-<div>
-    <h3>4.Portable Power Bank</h3>
+ <div class="product-container">
+    <h3 class="product-name">4.Portable Power Bank</h3>
     <img src="images/image5.jpg" style="max-width: 300px;max-width: 250px;border-radius: 15px;">
     <h3>Price:180$ </h3>
     <a href="cart.html" target="_blank"><button>Buy</button></a>
+    <div class="product-details">
     <p style="font-family: Arial, Helvetica, sans-serif; line-height: 1.06; text-align: justify;margin: 0;">
         This sleek metallic silver power bank combines both style and practicality in a compact design. Featuring a digital LED display, it clearly shows the remaining 
         battery percentage, ensuring you always know when it's time to recharge. The power bank is equipped with both USB-C and USB-A ports, allowing for fast charging 
@@ -113,47 +133,71 @@
         you stay powered up throughout the day. Its sleek metallic finish gives it a modern and sophisticated look, while the quick charging capabilities provide 
         convenience for all your devices. 
     </p>
+    </div> 
+ </div>
+</div>
+
 </section>
 
 <!--Section About-->
 <section id="about">
-    <h1>About Us</h1>
-    <img src="images/about.jpg" style="max-width: 450px; max-height: 450px;">
-    <p style="font-family: Arial, Helvetica, sans-serif; line-height: 1.06; text-align: justify;margin: 0;">
+<div class="main">
+    
+      <div class="about">
+        <h1>About Us</h1>
+        <img src="images/about.jpg" style="max-width: 450px; max-height: 450px;">
+           <div class="about-details" >
+        <p style="font-family: Arial, Helvetica, sans-serif; line-height: 1.06; text-align: justify;margin: 0;">
         We are a passionate team committed to bringing you the best in technology and innovation. Our journey began in 2022, 
         and since then, we've been dedicated to providing high-quality, cutting-edge products designed to enhance your lifestyle. 
         We believe in delivering exceptional value to our customers, ensuring that every product we offer is crafted with precision, 
         durability, and style.
-    </p>
+        </p>
+            </div>
+     </div>
+
     <div>
+        <div  class="about">
         <h2>Our Story</h2>
+        <div class="about-details"  >
         <p style="font-family: Arial, Helvetica, sans-serif; line-height: 1.06; text-align: justify;margin: 0;">
             Based in Sainamaina-10, Saljhandi, Rupandehi, we are proud to serve our local community and customers worldwide. 
             The company was founded by Surajan Shrestha, who had a vision to provide the best in tech and innovation at affordable 
             prices. Our founder's dedication to excellence drives the team to continually evolve and improve our products to meet 
             the ever-changing needs of today’s tech-savvy world. 
         </p>
+        </div>
+        </div>
+        <div  class="about">
         <h2>Our Values</h2>
+        <div class="about-details"  >
         <p style="font-family: Arial, Helvetica, sans-serif; line-height: 1.06; text-align: justify;margin: 0;">
             We value customer satisfaction above all else and strive to create a seamless shopping experience. With a strong focus on quality, performance, and design, we ensure that each product undergoes rigorous testing before reaching our customers. Our mission is to enrich your lifestyle with products that are not only functional but also stylish, reliable, and long-lasting.
         </p>
-        
+       </div>
+       </div>
         
     </div>
+</div>
 </section>
 
 <!-- Section contact-->
  <section id="contact">
+<div class="main">
     <h2>Contact Information</h2>
     <div>
+        <div class="container">
         <p style="font-family: Arial, Helvetica, sans-serif; line-height: 1.06; text-align: justify;margin: 0;">
             Feel free to reach out to us anytime. We are always here to assist you with any inquiries you may have. 
             You can contact us via:<br>
             Surajansth2061@gmail.com  <br>
             tel.no :9816413787<br>
             fill the form below :
-        </p><br>
-        <form method="post" action="#">
+        </p>
+        </div><br>
+        <div class="form-container">
+      
+         <form method="post" action="#">
             <div>
                 <label>First Name</label>
                 <input type="text" placeholder="Enter Your name ">
@@ -182,9 +226,12 @@
             <div>
                 <button>submit</button>
             </div>
+                  
+        </div>
         
         </form>
     </div><br>
+</div>
 </section>
 
 
