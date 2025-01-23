@@ -7,7 +7,7 @@
     <style>
         /* General styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Roboto", Arial, sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
@@ -31,269 +31,271 @@
         header {
             position: sticky;
             top: 0;
-            background-color: #f8f9fa;
-            border-bottom: 1px solid #ddd;
+            background: linear-gradient(90deg, #007BFF, #0056b3);
+            color: #fff;
             z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 10px 20px;
         }
 
         header h1 {
+            font-size: 1.5rem;
             margin: 0;
-            text-align: center;
         }
 
         nav ul {
             list-style: none;
             padding: 0;
-            margin: 10px 0 0;
-            text-align: center;
+            margin: 0;
+            display: flex;
         }
 
         nav ul li {
-            display: inline-block;
             margin: 0 15px;
         }
 
         nav ul li a {
             font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
         }
 
-        /* Section styles */
-        section {
-            padding: 40px 20px;
-            text-align: center;
+        /* Mobile navigation toggle */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
         }
 
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                background: #0056b3;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 200px;
+                display: none;
+                padding: 20px;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        /* Hero Section */
         #home {
-            background-color: #e9ecef;
-            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
         }
 
         #home h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            animation: fadeInDown 1s ease-out;
         }
 
         #home a {
-            display: inline-block;
             margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007BFF;
+            padding: 15px 30px;
+            background: #007BFF;
             color: #fff;
             border-radius: 5px;
+            font-size: 1.2rem;
+            animation: fadeInUp 1.5s ease-out;
         }
 
         #home a:hover {
-            background-color: #0056b3;
+            background: #0056b3;
         }
 
-        /* Portfolio styles */
-        #portfolio {
-            background-color: #f8f9fa;
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Portfolio Section */
         #portfolio div {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 20px;
         }
 
         article {
             border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            background-color: #fff;
-            text-align: left;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        article:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         article img {
-            max-width: 100%;
-            border-radius: 5px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
 
         article h3 {
-            margin-top: 10px;
+            margin: 10px;
         }
 
-        /* Services styles */
-        #services ul {
-            list-style: none;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0;
-            text-align: left;
-        }
-
-        #services ul li {
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #fff;
-        }
-
-        /* Testimonials styles */
-        #testimonials blockquote {
-            margin: 20px auto;
-            max-width: 600px;
-            font-style: italic;
-            background-color: #fff;
-            padding: 20px;
-            border-left: 5px solid #007BFF;
-            border-radius: 5px;
-        }
-
-        #testimonials cite {
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        /* Contact styles */
-        form {
-            max-width: 600px;
-            margin: 0 auto;
+        /* Skills Section */
+        #skills {
             background-color: #f8f9fa;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        fieldset {
-            border: none;
-            padding: 0;
-        }
-
-        label {
-            display: block;
-            margin: 10px 0 5px;
-        }
-
-        input, textarea, button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        button {
-            background-color: #007BFF;
-            color: #fff;
-            font-weight: bold;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Footer styles */
-        footer {
-            background-color: #f8f9fa;
+            padding: 40px 20px;
             text-align: center;
-            padding: 20px;
-            border-top: 1px solid #ddd;
+        }
+
+        .progress-bar {
+            background: #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 10px auto;
+            max-width: 600px;
+        }
+
+        .progress-bar div {
+            background: #007BFF;
+            height: 20px;
+            width: 0%;
+            text-align: right;
+            padding: 0 10px;
+            color: #fff;
+            line-height: 20px;
+            border-radius: 20px 0 0 20px;
+            animation: fillBar 1.5s forwards;
+        }
+
+        @keyframes fillBar {
+            from {
+                width: 0;
+            }
+            to {
+                width: 80%;
+            }
+        }
+
+        /* Contact Form */
+        form {
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #007BFF;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(90deg, #007BFF, #0056b3);
+            color: #fff;
         }
 
         footer p {
             margin: 5px 0;
         }
-
-        footer a {
-            margin: 0 10px;
-            color: #007BFF;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header role="banner">
+    <header>
         <h1>My Portfolio</h1>
-        <nav role="navigation">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section id="home">
         <h2>Welcome to My Portfolio</h2>
-        <p>I am a passionate web developer ready to create amazing experiences.</p>
         <a href="#portfolio">View My Work</a>
     </section>
 
-    <!-- Portfolio Section -->
     <section id="portfolio">
         <h2>My Portfolio</h2>
         <div>
             <article>
-                <img src="#" alt="Project Thumbnail 1">
+                <img src="#" alt="Project 1">
                 <h3>Project 1</h3>
-                <p>Short description of the project.</p>
+                <p>Description of Project 1</p>
                 <a href="#">View Details</a>
             </article>
-            <!-- Add more projects similarly -->
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>My Services</h2>
-        <ul>
-            <li><strong>Web Development:</strong> Crafting responsive and user-friendly websites.</li>
-            <li><strong>SEO Optimization:</strong> Helping your website rank higher in search engines.</li>
-            <li><strong>UI/UX Design:</strong> Designing intuitive and beautiful interfaces.</li>
-            <li><strong>Backend Development:</strong> Building robust server-side solutions.</li>
-            <li><strong>Consulting:</strong> Providing expert advice for your tech needs.</li>
-        </ul>
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="progress-bar">
+            <div style="width: 90%;">Web Development - 90%</div>
+        </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <h2>Testimonials</h2>
-        <blockquote>
-            <p>"Amazing work! Highly recommend their services."</p>
-            <cite>- surajan shrestha</cite>
-        </blockquote>
-        <!-- Add more testimonials -->
-    </section>
-
-    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
         <form>
-            <fieldset>
-                <legend>Contact Form</legend>
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit">Submit</button>
-            </fieldset>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+            <button type="submit">Send</button>
         </form>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>© 2025 Your Name</p>
-        <p>
-            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a>
-        </p>
-        <p><a href="#home">Back to Top</a></p>
+        <p>© 2025 Surajan Shrestha</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector("nav ul");
+            nav.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
