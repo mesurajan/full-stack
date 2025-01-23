@@ -3,14 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A  portfolio webpage</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Responsive Portfolio</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            color: #444;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header styles */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            font-weight: bold;
+        }
+
+        /* Section styles */
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        #home {
+            background-color: #e9ecef;
+            padding: 60px 20px;
+        }
+
+        #home h2 {
+            font-size: 2.5rem;
+        }
+
+        #home a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        #home a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Portfolio styles */
+        #portfolio {
+            background-color: #f8f9fa;
+        }
+
+        #portfolio div {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        article {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #fff;
+            text-align: left;
+        }
+
+        article img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        article h3 {
+            margin-top: 10px;
+        }
+
+        /* Services styles */
+        #services ul {
+            list-style: none;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0;
+            text-align: left;
+        }
+
+        #services ul li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        /* Testimonials styles */
+        #testimonials blockquote {
+            margin: 20px auto;
+            max-width: 600px;
+            font-style: italic;
+            background-color: #fff;
+            padding: 20px;
+            border-left: 5px solid #007BFF;
+            border-radius: 5px;
+        }
+
+        #testimonials cite {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Contact styles */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            margin: 0 10px;
+            color: #007BFF;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-<header role="banner">
-    <div >
-        <h1 style="text-align: center;">My Portfolio</h1>
-        <nav class="navbar" role="navigation">
+    <!-- Header -->
+    <header role="banner">
+        <h1>My Portfolio</h1>
+        <nav role="navigation">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
@@ -19,17 +223,77 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </div>
-</header>
+    </header>
 
-<!--home section-->
-<section id="home">
-    <div class="home">
-        <h1 style="text-align: center;">Welcome to My portfolio</h1>
-        <p>I m a passoniate web devloper</p>
+    <!-- Hero Section -->
+    <section id="home">
+        <h2>Welcome to My Portfolio</h2>
+        <p>I am a passionate web developer ready to create amazing experiences.</p>
         <a href="#portfolio">View My Work</a>
-     </div>
-</section>
-    
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2>My Portfolio</h2>
+        <div>
+            <article>
+                <img src="#" alt="Project Thumbnail 1">
+                <h3>Project 1</h3>
+                <p>Short description of the project.</p>
+                <a href="#">View Details</a>
+            </article>
+            <!-- Add more projects similarly -->
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>My Services</h2>
+        <ul>
+            <li><strong>Web Development:</strong> Crafting responsive and user-friendly websites.</li>
+            <li><strong>SEO Optimization:</strong> Helping your website rank higher in search engines.</li>
+            <li><strong>UI/UX Design:</strong> Designing intuitive and beautiful interfaces.</li>
+            <li><strong>Backend Development:</strong> Building robust server-side solutions.</li>
+            <li><strong>Consulting:</strong> Providing expert advice for your tech needs.</li>
+        </ul>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <blockquote>
+            <p>"Amazing work! Highly recommend their services."</p>
+            <cite>- surajan shrestha</cite>
+        </blockquote>
+        <!-- Add more testimonials -->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <fieldset>
+                <legend>Contact Form</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Your Name</p>
+        <p>
+            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a>
+        </p>
+        <p><a href="#home">Back to Top</a></p>
+    </footer>
 </body>
 </html>
