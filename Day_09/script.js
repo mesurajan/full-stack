@@ -5,7 +5,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     const password = document.getElementById('password').value;
     const errorMessage = document.getElementById('error-message');
   
-    // Simple validation
+   // Simple validation
     if (username === '' || password === '') {
       errorMessage.textContent = 'Please fill in all fields.';
       errorMessage.style.display = 'block';
